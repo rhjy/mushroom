@@ -1,12 +1,37 @@
 <!--pages/home/home.wxml-->
+<!-- 搜索栏 -->
 <view class="search-bar">
 	<image src="../../assets/images/search_icon@2x.png"></image>
 	<text>请输入课程的名称</text>
 </view>
-<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-	<block wx:for="{{background}}" wx:key="*this">
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots autoplay duration="{{duration}}" interval="{{interval}}" circular>
+	<block wx:for="{{bannerImageList}}" wx:key="*this">
 		<swiper-item>
-			<image src="../../assets/images/"> </image>
+			<image src="{{item.url}}"> </image>
 		</swiper-item>
 	</block>
 </swiper>
+<!-- 推荐课程 -->
+<view class="recommended-bar">
+	<view class="recommended">
+		<text>推荐课程</text>
+		<image src="../../assets/images/arrow@2x.png"></image>
+	</view>
+	<scroll-view class="scroll-view" scroll-x="true" bindscroll="scroll" scroll-left="" style="width: 100%">
+		<image class="scroll-view-item" wx:for="{{courseList}}" src="{{item.icon}}"></image>
+	</scroll-view>
+</view>
+<!-- 热门视频 -->
+<view class="video">
+	<view class="video-head">
+		<text>热门视频</text>
+	</view>
+	<view class="video-box">
+		<view class="video-item" wx:for="{{videoImageList}}" wx:key="*this">
+			<image src="{{item.cover_photo_url}}"></image>
+			<text class="video-item-title">{{item.name}}</text>
+			<text class="video-item-view_count">{{item.view_count}}人已观看</text>
+		</view>
+	</view>
+</view>

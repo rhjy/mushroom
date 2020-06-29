@@ -1,8 +1,9 @@
 /* pages/home/home.wxss */
-page{
+page {
   padding: 0 32rpx;
   box-sizing: border-box;
 }
+/* 搜索栏 */
 .search-bar {
   display: flex;
   height: 56rpx;
@@ -10,16 +11,97 @@ page{
   border-radius: 28rpx;
   background-color: #eee;
 }
-.search-bar image{
+
+.search-bar image {
   width: 56rpx;
   height: 56rpx;
 }
+
 .search-bar text {
   font-size: 28rpx;
   color: #ABABAB;
   margin-top: 8rpx;
 }
-.swiper{
+/* 轮播图 */
+.swiper {
   width: 686rpx;
   height: 340rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+  border-radius: 14rpx;
+}
+/* 推荐课程 */
+.recommended-bar {
+  margin-right: -32rpx;
+}
+
+.recommended-bar .recommended {
+  display: flex;
+  align-items: center;
+  margin: 40rpx 0 34rpx;
+}
+
+.recommended-bar .recommended text {
+  font-size: 38rpx;
+  margin-left: 4rpx;
+  margin-right: 478rpx;
+}
+
+.recommended-bar .recommended image {
+  height: 48rpx;
+  width: 48rpx;
+}
+
+.recommended-bar .scroll-view {
+  /* width: 100%; */
+  height: 168rpx;
+  white-space: nowrap;
+  
+}
+.recommended-bar .scroll-view .scroll-view-item {
+  display: inline-block;
+  width: 296rpx;
+  height: 100%;
+  margin-right: 20rpx;
+}
+/* 热门视频 */
+.video {
+  margin-top: 42rpx;
+}
+.video .video-head{
+  margin-bottom: 38rpx;
+}
+.video .video-head text {
+  font-size: 38rpx;
+  margin-left: 4rpx;
+}
+.video .video-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.video .video-box .video-item {
+  width: 324rpx;
+  height: 310rpx;
+}
+.video .video-box .video-item image{
+  width: 324rpx;
+  height:200rpx ;
+  border-radius: 12rpx;
+}
+.video .video-box .video-item .video-item-title{
+  display: block;
+  font-size: 26rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin: 16rpx 0 4rpx;
+  color: #262626;
+}
+.video .video-box .video-item .video-item-view_count{
+  display: block;
+  font-size: 18rpx;
+  color: #959595;
 }
