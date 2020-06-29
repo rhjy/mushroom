@@ -1,1 +1,25 @@
 /* pages/home/home.wxss */
+page{
+  padding: 0 32rpx;
+  box-sizing: border-box;
+}
+.search-bar {
+  display: flex;
+  height: 56rpx;
+  margin: 14rpx 8rpx 12rpx;
+  border-radius: 28rpx;
+  background-color: #eee;
+}
+.search-bar image{
+  width: 56rpx;
+  height: 56rpx;
+}
+.search-bar text {
+  font-size: 28rpx;
+  color: #ABABAB;
+  margin-top: 8rpx;
+}
+.swiper{
+  width: 686rpx;
+  height: 340rpx;
+}

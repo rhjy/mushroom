@@ -1,2 +1,12 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class="search-bar">
+	<image src="../../assets/images/search_icon@2x.png"></image>
+	<text>请输入课程的名称</text>
+</view>
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	<block wx:for="{{background}}" wx:key="*this">
+		<swiper-item>
+			<image src="../../assets/images/"> </image>
+		</swiper-item>
+	</block>
+</swiper>
